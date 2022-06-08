@@ -4,7 +4,7 @@
     <!----------/ start main /---------->
     <div class="overflow-hidden">
       <div class="mx-auto">
-
+        Index
       </div>
     </div>
 

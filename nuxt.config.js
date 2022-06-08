@@ -1,3 +1,5 @@
+const webpack = require("webpack");
+
 export default {
   target: "server",
   ssr: true,
@@ -67,10 +69,20 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/styles/theme.scss"],
+  css: [
+    // "~bootstrap/scss/bootstrap",
+    "~/assets/styles/theme.scss",
+    "~/assets/css/fontawesome.css",
+    "~/assets/css/icofont.css",
+    "~/assets/css/themify.css",
+    "~/assets/css/feather-icon.css",
+    "~/assets/css/chartist.css",
+    "~/assets/css/animate.css",
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // { src: "~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", mode: "client" },
     { src: "~/plugins/tailwind-components.js" },
     { src: "~/plugins/eventHub.js", mode: "client" },
     { src: "~/plugins/html/observer.js", mode: "client" },
@@ -81,6 +93,10 @@ export default {
     "~/plugins/components",
     "~/plugins/axios.js",
     "~/plugins/global.js",
+    { src: "~/assets/js/config.js", mode: "client" },
+    { src: "~/assets/js/sidebar-menu.js", mode: "client" },
+    { src: "~/assets/js/script.js", mode: "client" },
+    { src: "~/assets/js/theme-customizer/customizer.js", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -133,6 +149,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ["epic-spinners"],
+    vendor: ["jquery", "bootstrap"],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery"
+      })
+    ],
   },
   loading: false,
   publicRuntimeConfig: {

@@ -5,7 +5,7 @@
         <h1>{{ titre }}</h1>
       </div>
 
-      <form class="form_davy">
+      <form class="form_davy mb-5">
         <div class="svgContainer">
           <div>
             <svg
@@ -306,7 +306,7 @@
       </form>
 
       <div class="mx-auto text_center">
-        <nuxt-link to="/">{{ lien }}</nuxt-link>
+        <nuxt-link :to="url_lien">{{ lien }}</nuxt-link>
       </div>
     </div>
   </section>
@@ -315,20 +315,41 @@
 <script>
 export default {
   name: "FormulaireConnexion",
-  props: ["titre", "bouton_submit", "lien"],
-  head() {
-    return {
-      script: [
-        {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"
-        },
-        {
-          src: "/js/formulaireConnexion.js",
-          body: true
-        }
-      ]
-    };
-  }
+  props: {
+    titre: {
+      type: String,
+      default: "Formulaire",
+    },
+    bouton_submit: {
+      type: String,
+      default: "Valider",
+    },
+    lien: {
+      type: String,
+      default: "Accueil",
+    },
+    url_lien: {
+      type: String,
+      default: "/",
+    },
+  },
+  head: {
+    link: [
+      {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap-grid.min.css",
+      },
+    ],
+    script: [
+      {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js",
+      },
+      {
+        src: "/js/formulaireConnexion.js",
+        body: true,
+      },
+    ],
+  },
 };
 </script>
 

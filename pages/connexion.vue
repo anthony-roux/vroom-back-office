@@ -3,6 +3,7 @@
     titre="CONNEXION"
     bouton_submit="Se connecter"
     lien="Inscription"
+    url_lien="inscription"
   />
 </template>
 

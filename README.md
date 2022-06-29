@@ -1,4 +1,3 @@
-
 <h1>Nuxt JS + Tailwind CSS + ESLint
   <a
     href="https://nestjs.com/"
@@ -30,22 +29,20 @@ This is a Nuxt JS + Tailwind CSS boilerplate code with preconfigured libraries a
 - Preconfigured [VueTailwind](https://www.vue-tailwind.com/) with highly customizable tailwind module
 - Integrated [nuxt/axios](https://axios.nuxtjs.org/) for promise based HTTP client
 - Integrated [nuxt/auth](https://auth.nuxtjs.org/) for authentication
-- Integrated [nuxt-img](https://image.nuxtjs.org/components/nuxt-img/) to replace vanilla  ``<img>`` HTML tag for better image optimization
-- Smooth configurable page, layout transition at ``@/assets/css/main``
-- Built-in awesome content loader using [vue-content-loader](https://www.npmjs.com/package/vue-content-loader)  
+- Integrated [nuxt-img](https://image.nuxtjs.org/components/nuxt-img/) to replace vanilla `<img>` HTML tag for better image optimization
+- Smooth configurable page, layout transition at `@/assets/css/main`
+- Built-in awesome content loader using [vue-content-loader](https://www.npmjs.com/package/vue-content-loader)
 - Integrated [@babel/eslint-parser, prettier](https://www.npmjs.com/package/@babel/eslint-parser) for codes' rules & styles checking and formatting
-- Integrated [vuex-map-fields](https://www.npmjs.com/package/vuex-map-fields) for form data binding 
+- Integrated [vuex-map-fields](https://www.npmjs.com/package/vuex-map-fields) for form data binding
 - https://www.npmjs.com/package/nuxt-lazysizes
 - https://www.npmjs.com/package/nuxt-svg-loader
 - https://nuxtjs.org/docs/configuration-glossary/configuration-components/
-
 
 ## Setup Guide
 
 **Be aware that** you might have to add **BASE_URL** to your environment variable in case you build for production.
 
-
-###  Installation
+### Installation
 
 For a confortable use during the coding, please install the Tailwind CSS IntelliSense plugin on VSC
 
@@ -53,14 +50,16 @@ For a confortable use during the coding, please install the Tailwind CSS Intelli
 
 $ nvm list
 $ nvm use v16.14.0
-$ git clone https://github.com/anthony-roux/vroomkids_vitrine-website
-$ cd vroomkids_vitrine-website
+$ git clone https://github.com/anthony-roux/vroom-back-office
+$ cd vroom-back-office
 $ yarn install
 $ yarn dev
-````
-Visit http://localhost:3000/ 
+```
+
+Visit http://localhost:3000/
 
 ### Production Guide
+
 ```bash
 # build for production and launch server
 $ yarn build
@@ -70,13 +69,11 @@ $ yarn start
 $ yarn generate
 ```
 
-
 ### With Docker
 
 Comming Soon!
 
+### Nice to have in the pocket
 
-### Nice to have in the pocket 
-
-Tailwind CSS Cheat Sheet: 
+Tailwind CSS Cheat Sheet:
 https://nerdcave.com/tailwind-cheat-sheet

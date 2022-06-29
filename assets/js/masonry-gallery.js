@@ -1,14 +1,14 @@
 import jQuery from "jquery";
 
-"use strict";
-(function($) {
-	"use strict";
-	var masonry_gallery = {
-		init: function() {
-			$('.grid').isotope({
-				itemSelector: '.grid-item'
-			});
-		}
-	};
-    masonry_gallery.init();
+("use strict");
+(function ($) {
+  "use strict";
+  var masonry_gallery = {
+    init: function () {
+      $(".grid").isotope({
+        itemSelector: ".grid-item",
+      });
+    },
+  };
+  masonry_gallery.init();
 })(jQuery);

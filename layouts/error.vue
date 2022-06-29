@@ -1,7 +1,7 @@
 <template>
   <section class="page404">
     <div
-      class="container flex flex-col max-w-screen-sm mx-auto my-40  page404__container"
+      class="container flex flex-col max-w-screen-sm mx-auto my-20 page404__container"
     >
       <h4 class="mx-auto mb-10 page404__title text-9xl">
         {{ error.statusCode }}

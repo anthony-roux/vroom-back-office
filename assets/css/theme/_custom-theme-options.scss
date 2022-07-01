@@ -5337,39 +5337,7 @@ body {
 				}
 			}
 		}
-		.bootstrap-datetimepicker-widget{
-			ul{
-				li{
-					color: $dark-all-font-color;
-					border-bottom: 1px solid $dark-card-border;
-				}
-			}
-			tr{
-				th,td{
-					&:hover{
-						background-color: $dark-card-background;
-					}
-					span{
-						&:hover{
-							background-color: $dark-card-background;
-						}
-					}
-					&.prev,
-					&.next{
-						&:hover{
-							background-color: $dark-card-background;
-						}
-					}
-				}
-				&:first-child{
-					th{
-						&:hover{
-							background-color: $dark-card-background;
-						}
-					}
-				}
-			}
-		}
+
 		.btn-transparent {
 			color: $dark-all-font-color;
 		}

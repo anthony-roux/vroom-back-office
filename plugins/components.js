@@ -23,8 +23,10 @@ Vue.component("c-svg-icons", SvgIcons);
 // STRATES
 
 import StrateText from "~/components/Strates/StrateText.vue";
+import StrateCard from "~/components/Strates/StrateCard.vue";
 
 Vue.component("strate-text", StrateText);
+Vue.component("strate-card", StrateCard);
 
 // COMPONENTS
 

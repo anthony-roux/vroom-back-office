@@ -6,9 +6,7 @@ import Vue from "vue";
 // Base
 import UseSvg from "~/components/Base/UseSvg.vue";
 
-
 Vue.component("base-use-svg", UseSvg);
-
 
 // CORE
 
@@ -18,22 +16,17 @@ Vue.component("base-use-svg", UseSvg);
 
 // COMMON (layout, Header, footer etc..)
 
-import Header from "~/components/Common/Header.vue";
-import Nav from "~/components/Common/Nav.vue";
-import Sidebar from "~/components/Common/Sidebar.vue";
 import SvgIcons from "~/components/Common/SvgIcons.vue";
-
-Vue.component("c-header", Header);
-Vue.component("c-sidebar", Sidebar);
-Vue.component("c-nav-menu", Nav);
 
 Vue.component("c-svg-icons", SvgIcons);
 
 // STRATES
 
 import StrateText from "~/components/Strates/StrateText.vue";
+import StrateCard from "~/components/Strates/StrateCard.vue";
 
 Vue.component("strate-text", StrateText);
+Vue.component("strate-card", StrateCard);
 
 // COMPONENTS
 

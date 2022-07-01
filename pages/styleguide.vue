@@ -28,7 +28,9 @@
 
         <div class="flex flex-wrap items-center justify-between ctas my-14">
           <div class="">
-            <a href="" class="mt-8 mb-4 text-md md:text-lg t-link--color">I am a link</a>
+            <a href="" class="mt-8 mb-4 text-md md:text-lg t-link--color"
+              >I am a link</a
+            >
           </div>
           <t-button tagName="a" href="https://www.google.fr/" variant=""
             ><span>primary button</span></t-button
@@ -68,12 +70,6 @@
             src="static/img/logo-vroom-blanc-w2000.png"
             class="object-contain mx-auto my-6"
           />
-          <img
-            :src="require(`static/img/photography/child+bus_hero-homepage.png`)"
-            alt=""
-            class="my-6"
-          />
-          <img :src="require(`static/img/giphy.gif`)" alt="" class="my-6" />
         </div>
       </section>
       <section class="my-14">
@@ -93,13 +89,15 @@
       <section class="my-14">
         <span class="text-2xl">ICON</span>
         <hr />
-        
-        <div class="grid items-center grid-cols-3 justify-items-center space-x-7">
-            <base-big-letter text="1" />
-            <base-big-letter text="2" />
-            <base-big-letter text="3" />
+
+        <div
+          class="grid items-center grid-cols-3 justify-items-center space-x-7"
+        >
+          <base-big-letter text="1" />
+          <base-big-letter text="2" />
+          <base-big-letter text="3" />
         </div>
-          <base-big-letter text="whaaaow" />
+        <base-big-letter text="whaaaow" />
       </section>
     </div>
   </div>

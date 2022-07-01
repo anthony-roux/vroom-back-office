@@ -1,25 +1,18 @@
 <template>
-  <section id="page-connexion" class="">
-    <div class="overflow-hidden">
-      <div class="mx-auto">CONNEXION</div>
-    </div>
-  </section>
+  <FormulaireConnexion
+    titre="CONNEXION"
+    bouton_submit="Se connecter"
+    lien="Inscription"
+    url_lien="inscription"
+  />
 </template>
 
 <script>
-export default {
-  name: "Connexion",
+import FormulaireConnexion from "~/components/FormulaireConnexion";
 
-  data() {
-    return {};
-  },
-  head() {
-    return {
-      bodyAttrs: {
-        class: "connexion",
-      },
-    };
-  },
-  methods: {},
+export default {
+  components: {
+    FormulaireConnexion
+  }
 };
 </script>

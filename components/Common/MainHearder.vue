@@ -1,5 +1,5 @@
 <template>
-  <div class="main-header-right row m-0">
+  <div class="m-0 main-header-right row">
     <div class="main-header-left">
       <div class="logo-wrapper">
         <NuxtLink to="/"
@@ -60,7 +60,7 @@
         </li>
       </ul>
     </div>
-    <div class="nav-right col pull-right right-menu p-0">
+    <div class="p-0 nav-right col pull-right right-menu">
       <ul class="nav-menus">
         <li>
           <a class="text-dark" v-on:click="toggleFullScreen" href="#!"
@@ -101,7 +101,7 @@
             </svg>
           </div>
           <div class="bookmark-dropdown onhover-show-div">
-            <div class="form-group mb-0">
+            <div class="mb-0 form-group">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"
@@ -280,7 +280,7 @@
           </div>
           <ul class="notification-dropdown onhover-show-div">
             <li>
-              <p class="f-w-700 mb-0">
+              <p class="mb-0 f-w-700">
                 Vous avez 3 Notifications<span
                   class="pull-right badge badge-primary badge-pill"
                   >4</span
@@ -460,7 +460,7 @@
             </li>
           </ul>
         </li>
-        <li class="onhover-dropdown p-0">
+        <li class="p-0 onhover-dropdown">
           <button class="btn btn-primary-light" type="button">
             <a href="login_two.html" class="flex py-2"
               ><svg
@@ -484,7 +484,7 @@
         </li>
       </ul>
     </div>
-    <div class="d-lg-none mobile-toggle pull-right w-auto">
+    <div class="w-auto d-lg-none mobile-toggle pull-right">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -505,7 +505,7 @@
   </div>
 </template>
 
-// @click=LOGOUT
+@click=LOGOUT
 
 <script>
 import toggleFullScreen from "@/assets/js/fullscreen";

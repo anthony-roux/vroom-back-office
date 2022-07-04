@@ -32,8 +32,169 @@
                 <h6>General</h6>
               </div>
             </li>
-            <li class="dropdown">
-              <NuxtLink to="/" class="nav-link menu-title"
+            <li
+              class="w-full p-1 transition-colors duration-500 dropdown group"
+            >
+              <NuxtLink
+                to="/"
+                class="flex items-center justify-center w-full nav-link menu-title"
+              >
+                <div class="w-full p-4 rounded-md">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-home"
+                  >
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    ></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <span>Dashboard</span>
+                  <div class="according-menu">
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </NuxtLink>
+            </li>
+            <li
+              class="w-full p-1 transition-colors duration-500 dropdown group"
+            >
+              <NuxtLink
+                to="/rides"
+                class="flex items-center justify-center w-full nav-link menu-title"
+              >
+                <div class="w-full p-4 rounded-md">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-home"
+                  >
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    ></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <span>Courses</span>
+                  <div class="according-menu">
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </NuxtLink>
+            </li>
+            <li
+              class="w-full p-1 transition-colors duration-500 dropdown group"
+            >
+              <NuxtLink
+                to="/drivers"
+                class="flex items-center justify-center w-full nav-link menu-title"
+              >
+                <div class="w-full p-4 rounded-md">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-home"
+                  >
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    ></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <span>Chauffeurs</span>
+                  <div class="according-menu">
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </NuxtLink>
+            </li>
+            <li
+              class="w-full p-1 transition-colors duration-500 dropdown group"
+            >
+              <NuxtLink
+                to="/customers"
+                class="flex items-center justify-center w-full nav-link menu-title"
+              >
+                <div class="w-full p-4 rounded-md">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-home"
+                  >
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    ></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <span>Parents</span>
+                  <div class="according-menu">
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </NuxtLink>
+            </li>
+            <li
+              class="w-full p-1 transition-colors duration-500 dropdown group"
+            >
+              <NuxtLink
+                to="/childrens"
+                class="flex items-center justify-center w-full nav-link menu-title"
+              >
+                <div class="w-full p-4 rounded-md">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-home"
+                  >
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    ></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <span>Passagers</span>
+                  <div class="according-menu">
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </NuxtLink>
+            </li>
+
+            <!-- <li class="dropdown">
+              <NuxtLink class="nav-link menu-title" to="/customers"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -44,15 +205,40 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="feather feather-home"
+                  class="feather feather-mail"
                 >
                   <path
-                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                   ></path>
-                  <polyline points="9 22 9 12 15 12 15 22"></polyline></svg
-                ><span>Dashboard</span>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Parents</span>
                 <div class="according-menu">
-                  <i class="fa fa-angle-right"></i></div
+                  <i class="fa fa-angle-down"></i></div
+              ></NuxtLink>
+            </li>
+            <li class="dropdown">
+              <NuxtLink class="nav-link menu-title" to="/childrens"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-mail"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Passagers</span>
+                <div class="according-menu">
+                  <i class="fa fa-angle-down"></i></div
               ></NuxtLink>
             </li>
             <li class="dropdown">
@@ -72,13 +258,38 @@
                   <path
                     d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                   ></path>
-                  <polyline points="22,6 12,13 2,6"></polyline></svg
-                ><span>Parents</span>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Parents</span>
                 <div class="according-menu">
                   <i class="fa fa-angle-down"></i></div
               ></NuxtLink>
-            </li>
-            <li class="dropdown">
+            </li> -->
+            <!-- <li class="dropdown">
+              <NuxtLink class="nav-link menu-title" to="/customers"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-mail"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Parents</span>
+                <div class="according-menu">
+                  <i class="fa fa-angle-down"></i></div
+              ></NuxtLink>
+            </li> -->
+            <!-- <li class="dropdown">
               <NuxtLink class="nav-link menu-title" to="/email-inbox">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -101,8 +312,8 @@
                 <div class="according-menu">
                   <i class="fa fa-angle-down"></i></div
               ></NuxtLink>
-            </li>
-            <li class="dropdown">
+            </li> -->
+            <!-- <li class="dropdown">
               <NuxtLink class="nav-link menu-title" to="/email-inbox">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +427,7 @@
                 <div class="according-menu">
                   <i class="fa fa-angle-down"></i></div
               ></NuxtLink>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div class="right-arrow" id="right-arrow">
@@ -246,3 +457,13 @@ export default {
   name: "MainNav",
 };
 </script>
+
+<style lang="scss">
+.nav-link {
+  // &.active,
+  // &.nuxt-link-exact-active {
+  //   background-color: red;
+  //   color: $white;
+  // }
+}
+</style>

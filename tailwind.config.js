@@ -141,8 +141,8 @@ module.exports = {
           DEFAULT: "#FFE455",
         },
         pink: {
-          light: "#D3A2EA",
-          DEFAULT: "#A820D8",
+          light: "#F7E8FA",
+          DEFAULT: "#B21DCB",
         },
         teal: {
           lighter: "#F0FDFD",

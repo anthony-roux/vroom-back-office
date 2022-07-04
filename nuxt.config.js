@@ -69,12 +69,12 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "~/assets/styles/theme.scss",
-    "~/assets/css/fontawesome.css",
-    "~/assets/css/icofont.css",
-    "~/assets/css/themify.css",
-    "~/assets/css/feather-icon.css",
+    "~/assets/styles/css/fontawesome.css",
+    "~/assets/styles/css/icofont.css",
+    "~/assets/styles/css/themify.css",
+    "~/assets/styles/css/feather-icon.css",
+    "~/assets/styles/css/animate.css",
     // "~/assets/css/chartist.css",
-    "~/assets/css/animate.css",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

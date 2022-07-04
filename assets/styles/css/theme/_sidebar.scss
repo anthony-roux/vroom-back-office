@@ -273,7 +273,7 @@
                   .nav-link {
                     &.active,
                     &.nuxt-link-exact-active {
-                      background-color: white;
+                      background-color: red;
                       color: $secondary-color;
                     }
                   }
@@ -559,12 +559,12 @@
                 display: block;
                 float: none;
                 width: 100%;
-                padding: 0 20px;
+                // padding: 0 20px;
                 span {
                   font-weight: 600;
                 }
                 a {
-                  padding: 10px 15px;
+                  // padding: 10px 15px;
                   position: relative;
                   color: #222222;
                   svg {
@@ -712,21 +712,24 @@
                 .nav-link {
                   border-radius: 10px;
                   transition: all 0.5s ease;
-                  &.active,
-                  &.nuxt-link-exact-active,
+          
                   &:hover {
-                    background-color: $primary-color;
-                    color: lighten($primary-color, 60%);
+                    background-color: #F7E8FA;
+                    color: $primary-color;
                     transition: all 0.5s ease;
                     position: relative;
 
+                    span {
+                      color: $primary-color;
+                    }
+
                     .according-menu {
                       i {
-                        color: lighten($primary-color, 60%);
+                        color: $primary-color;
                       }
                     }
                     svg {
-                      color: lighten($primary-color, 60%) !important;
+                      color: $primary-color !important;
                     }
                   }
                 }
@@ -825,31 +828,32 @@
                   }
                   .nav-link {
                     text-align: center;
-                    padding-left: unset;
-                    padding-right: unset;
+
                     &.active,
                     &.nuxt-link-exact-active {
-                      background-color: transparent;
+                      background-color: $primary-color;
                       svg {
-                        color: $primary-color !important;
+                        color: white !important;
                       }
                       span {
-                        color: $primary-color !important;
+                        color: white !important;
                       }
                     }
                     svg {
                       display: block;
-                      width: auto;
-                      height: 50px;
-                      margin-left: auto;
-                      margin-right: auto;
-                      padding: 15px;
-                      border-radius: 5px;
+                      width: 32px;
+                      height: auto;
+                      margin: 0 auto 16px;
+                      border-radius: 8px;
                     }
                     span {
                       display: block;
                       word-wrap: break-word;
                       margin-top: -5px;
+
+                      &:hover {
+                        color: $primary-color;
+                      }
                     }
                   }
                 }

@@ -7,7 +7,7 @@
     <div class="container">
       <div class="col-xl-6 col-md-3 col-sm-6 box-col-3 des-xl-25 rate-sec">
         <div class="card income-card card-primary">
-          <div class="card-body text-center">
+          <div class="text-center card-body">
             <div class="round-box max-w-[10%]">
               <svg
                 version="1.1"
@@ -56,6 +56,11 @@ export default {
       default: "88,9",
     },
     subtitle: {
+      type: String,
+      required: false,
+      default: "Our Annual Income",
+    },
+    backgroundColor: {
       type: String,
       required: false,
       default: "Our Annual Income",

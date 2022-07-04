@@ -1,45 +1,49 @@
 <template>
-  <section
-    :class="backgroundColor ? 'py-32 ' : 'py-0'"
-    class="my-32 md:my-60 strate-text"
-    :style="{ background: `${backgroundColor}` }"
-  >
+  <section class="my-32 md:my-60 strate-text">
     <div class="container">
-      <div class="col-xl-6 col-md-3 col-sm-6 box-col-3 des-xl-25 rate-sec">
-        <div class="card income-card card-primary">
-          <div class="card-body text-center">
-            <div class="round-box max-w-[10%]">
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 448.057 448.057"
-                style="enable-background: new 0 0 448.057 448.057"
-                xml:space="preserve"
-              >
-                <g>
-                  <g>
-                    <path
-                      d="M404.562,7.468c-0.021-0.017-0.041-0.034-0.062-0.051c-13.577-11.314-33.755-9.479-45.069,4.099                                            c-0.017,0.02-0.034,0.041-0.051,0.062l-135.36,162.56L88.66,11.577C77.35-2.031,57.149-3.894,43.54,7.417                                            c-13.608,11.311-15.471,31.512-4.16,45.12l129.6,155.52h-40.96c-17.673,0-32,14.327-32,32s14.327,32,32,32h64v144                                            c0,17.673,14.327,32,32,32c17.673,0,32-14.327,32-32v-180.48l152.64-183.04C419.974,38.96,418.139,18.782,404.562,7.468z"
-                    ></path>
-                  </g>
-                </g>
-                <g>
-                  <g>
-                    <path
-                      d="M320.02,208.057h-16c-17.673,0-32,14.327-32,32s14.327,32,32,32h16c17.673,0,32-14.327,32-32                                            S337.694,208.057,320.02,208.057z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
+      <div class="col-sm-6 col-xl-3 col-lg-6">
+        <div class="card o-hidden border-0">
+          <div class="b-r-4 card-body" :style="{ background: `${color}` }">
+            <div class="media static-top-widget">
+              <div class="align-self-center text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-database"
+                >
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div class="media-body">
+                <span class="m-0">{{ subtitle }}</span>
+                <h4 class="mb-0 counter">{{ number }}</h4>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-database icon-bg"
+                >
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
             </div>
-            <h5 class="font-bold">{{ number }}</h5>
-            <p class="opacity-50">{{ subtitle }}</p>
-            <a class="btn-arrow arrow-primary" href="javascript:void(0)"
-              ><i class="toprightarrow-primary fa fa-arrow-up me-2"></i>95.54%
-            </a>
           </div>
         </div>
       </div>
@@ -50,6 +54,16 @@
 export default {
   name: "StrateCard",
   props: {
+    color: {
+      type: String,
+      required: false,
+      default: "#FF0000",
+    },
+    imageUrl: {
+      type: String,
+      required: false,
+      default: "@/assets/images/logo/logo-vroom-light.png",
+    },
     number: {
       type: String,
       required: false,

@@ -5,8 +5,12 @@ import Vue from "vue";
 
 // Base
 import UseSvg from "~/components/Base/UseSvg.vue";
+import InputText from "~/components/Base/InputText.vue";
+import TextArea from "~/components/Base/TextArea.vue";
 
 Vue.component("base-use-svg", UseSvg);
+Vue.component("base-input-text", InputText);
+Vue.component("base-text-area", TextArea);
 
 // CORE
 

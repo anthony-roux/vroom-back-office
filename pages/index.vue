@@ -1,6 +1,15 @@
 <template class="home">
   <div id="page-home" class="">
-    <strat-card subtitle="test" number="200"></strat-card>
+    <div class="">
+      <strat-card
+        imageUrl="/assets/images/logo/logo-vroom-light.png"
+        color="#333"
+        subtitle="test"
+        number="200"
+      ></strat-card>
+      <strat-card subtitle="test2" color="#222" number="250"></strat-card>
+      <strat-card subtitle="test3" number="300"></strat-card>
+    </div>
   </div>
 </template>
 

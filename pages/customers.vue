@@ -9,13 +9,6 @@
           bookmark_active="true"
         />
       </div>
-      <t-button
-        tagName="a"
-        class="bg-red w-full px-4 py-2 mb-0 cursor-pointer lg:w-auto"
-        variant="secondaryWhite"
-        @click="showModal = true"
-        ><span class="text-md md:text-3xl">Une question ?</span>
-      </t-button>
 
       <t-modal v-model="showModal" header="Posez-nous votre question">
         <div class="px-8 py-8 md:px-12 md:py-12">
@@ -168,11 +161,33 @@
               </span>
             </td>
             <td :class="props.tdClass">
-              <a href="" class="mt-8 mb-4 text-md md:text-lg t-link--color"
+              <a
+                @click="showModal = true"
+                class="mt-8 mb-4 text-md md:text-lg t-link--color"
                 >Edit</a
               >
             </td>
           </tr>
+        </template>
+        <template
+          slot="tfoot"
+          slot-scope="{ tfootClass, trClass, tdClass, renderResponsive }"
+        >
+          <tfoot :class="tfootClass">
+            <tr :class="trClass">
+              <td :class="tdClass" :colspan="renderResponsive ? 2 : 4">
+                <t-pagination
+                  :hide-prev-next-controls="renderResponsive"
+                  :total-items="100"
+                  :per-page="renderResponsive ? 3 : 5"
+                  :class="{
+                    'ml-auto': !renderResponsive,
+                    'mx-auto': renderResponsive,
+                  }"
+                />
+              </td>
+            </tr>
+          </tfoot>
         </template>
       </t-table>
     </div>

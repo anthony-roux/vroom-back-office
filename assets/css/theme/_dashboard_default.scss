@@ -357,7 +357,7 @@
     animation: makeItRain 6s infinite ease-out;
   }
   .confetti-piece:nth-child(odd) {
-    background-color: #418578;
+    background-color: #90EBE8;
   }
   .confetti-piece:nth-child(even) {
     z-index: 1;
@@ -372,7 +372,7 @@
   }
   .confetti-piece:nth-child(4n-7) {
     // background: red;
-    background-color: #418578;
+    background-color: #E0B7F4;
   }
   @-webkit-keyframes makeItRain {
     from {
@@ -985,7 +985,7 @@ span.twitter-typeahead {
     }
   }
   .media-body {
-    align-self: center !important;
+    align-self: start !important;
     padding-left: 30px;
     .icon-bg {
       position: absolute;

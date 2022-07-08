@@ -48,11 +48,11 @@
 }
 
 %text-gradient {
-  color: $green1;
+  color: $pink;
   @supports ((background-clip: text) or (-webkit-background-clip: text)) and
     ((text-fill-color: transparent) or (-webkit-text-fill-color: transparent)) {
-    background: $gradient-green;
-    background-image: $gradient-green;
+    background: $gradient-green2pink;
+    background-image: $gradient-green2pink;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;

@@ -11,7 +11,7 @@
       </div>
       <t-button
         tagName="a"
-        class="bg-red w-full px-4 py-2 mb-0 cursor-pointer lg:w-auto"
+        class="w-full px-4 py-2 mb-0 cursor-pointer bg-red lg:w-auto"
         variant="secondaryWhite"
         @click="showModal = true"
         ><span class="text-md md:text-3xl">Une question ?</span>
@@ -168,8 +168,8 @@
               </span>
             </td>
             <td :class="props.tdClass">
-              <a href="" class="mt-8 mb-4 text-md md:text-lg t-link--color"
-                >Edit</a
+              <a href="" class="inline-flex mt-8 mb-4 text-md md:text-lg t-link--secondary"
+                >Consulter</a
               >
             </td>
           </tr>

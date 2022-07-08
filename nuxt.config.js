@@ -123,8 +123,10 @@ export default {
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
+    "@nuxtjs/auth",
     "@nuxt/image",
     "nuxt-svg-loader",
+    
   ],
   // Purge module configuration: https://purgecss.com/guides/nuxt.html
   purgeCSS: {
@@ -135,11 +137,26 @@ export default {
   },
   // Nuxt Axios
   axios: {
-    proxy:
-      process.env.NODE_ENV === "production"
-        ? false
-        : process.env.NODE_ENV !== "staging",
-    baseURL: process.env.BASE_URL || "http://localhost:80",
+    baseURL: 'http://localhost:1234/'
+  },
+  auth: {
+    localStorage: false,
+    cookie: {
+      prefix: 'auth.',
+      options: {
+        path: '/',
+        maxAge: 10800
+      }
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: 'login', method: 'post', propertyName: 'access_token' },
+          user: { url: 'index', method: 'get', propertyName: 'content' },
+          logout: false
+        }
+      }
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

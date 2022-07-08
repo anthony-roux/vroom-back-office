@@ -33,7 +33,7 @@
         transform
         -translate-y-10
         scale-75
-        top-3
+        top-1
         -z-10
         origin-[0]
         peer-focus:left-0 peer-focus:text-primary-vert1

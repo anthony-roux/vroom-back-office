@@ -1,7 +1,7 @@
 <template>
   <section
   :class="backgroundColor ? 'py-32 ' : 'py-0'"
-    class="my-32 md:my-60 strate-text "
+    class=" strate-text"
     :style="{ background: `${backgroundColor}` }"
   >
     <div class="container">

@@ -1,4 +1,4 @@
-$header-size: 76px;
+$header-size: 54px;
 
 /**=====================
     05. Header CSS Start
@@ -82,7 +82,7 @@ $header-size: 76px;
     background-color: $light-background;
     .page-body {
       min-height: calc(100vh - #{$header-size});
-      margin-top: $header-size;
+      // margin-top: $header-size;
       padding: $page-body-padding;
       position: relative;
       transition: 0.5s;

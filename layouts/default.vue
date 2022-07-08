@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <main>
+    <c-svg-icons />
+
     <!-- Loader starts-->
     <div class="loader-wrapper">
       <div class="theme-loader">
@@ -15,15 +17,15 @@
         <!-- Page Sidebar Start-->
         <MainNav />
         <!-- Page Sidebar Ends-->
-        <div class="page-body">
-          <!-- <transition name="fade"> -->
+        <div class="page-body pt-[30px] lg:pt-[100px]">
+          <transition name="fade">
           <nuxt class="page-content" />
-          <!-- </transition> -->
+          </transition>
         </div>
         <Footer />
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -110,6 +112,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
-
+<style lang="scss"></style>

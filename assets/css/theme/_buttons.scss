@@ -198,7 +198,7 @@
 }
 [class*='-gradien']{
   &:hover{
-    background-size: 50% 100%;
+    background-size: 100% 100%;
     transition: all 0.3s ease;
     color: $white;
   }

@@ -56,6 +56,42 @@
               ></NuxtLink>
             </li>
             <li class="dropdown">
+              <NuxtLink class="nav-link menu-title" to="/courses">
+                <svg
+                  version="1.1"
+                  id="Calque_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 24 24"
+                  style="enable-background: new 0 0 24 24"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M23.3,6.1c0,0.4-0.3,0.7-0.7,0.7H1.4C1,6.8,0.7,6.5,0.7,6.1S1,5.4,1.4,5.4h21.3C23,5.4,23.3,5.7,23.3,6.1z"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M22.4,12.6h-4.2c-0.3,0-0.6-0.3-0.6-0.6s0.3-0.6,0.6-0.6h4.2c0.3,0,0.6,0.3,0.6,0.6S22.8,12.6,22.4,12.6z M14,12.6H9.8
+		c-0.3,0-0.6-0.3-0.6-0.6s0.3-0.6,0.6-0.6H14c0.3,0,0.6,0.3,0.6,0.6S14.4,12.6,14,12.6z M5.6,12.6H1.4c-0.3,0-0.6-0.3-0.6-0.6
+		s0.3-0.6,0.6-0.6h4.2c0.3,0,0.6,0.3,0.6,0.6S5.9,12.6,5.6,12.6z"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M22.6,18.6H1.4c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7h21.3c0.4,0,0.7,0.3,0.7,0.7S23,18.6,22.6,18.6z"
+                    />
+                  </g>
+                </svg>
+                <span>Courses</span>
+                <div class="according-menu">
+                  <i class="fa fa-angle-down"></i></div
+              ></NuxtLink>
+            </li>
+            <li class="dropdown">
               <NuxtLink class="nav-link menu-title" to="/customers">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -151,25 +187,33 @@
               ></NuxtLink>
             </li>
             <li class="dropdown">
-              <NuxtLink class="nav-link menu-title" to="/courses">
+              <NuxtLink class="nav-link menu-title" to="/accompagnateurs">
                 <svg
+                  version="1.1"
+                  id="Calque_1"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0"
+                  y="0"
                   viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-file"
+                  xml:space="preserve"
                 >
                   <path
-                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
-                  ></path>
-                  <polyline points="13 2 13 9 20 9"></polyline>
+                    d="M18.9 9.7c-.2-1.4-1.3-2.4-2.7-2.4h-1.5c-1.3 0-2.5 1-2.7 2.4l-.5 4.2c-.1.6.4 1.1.9 1.1h.7l.4 7.2c0 .5.4.9.9.9h2c.5 0 .9-.4.9-.9l.4-7.2h.8c.5 0 .9-.5.9-1l-.5-4.3z"
+                  />
+                  <path
+                    d="M18.2 3.8c0 1.5-1.2 2.8-2.7 2.8-1.5 0-2.7-1.2-2.7-2.8C12.8 2.3 14 1 15.5 1c1.4 0 2.7 1.3 2.7 2.8"
+                  />
+                  <g>
+                    <path
+                      d="M11 12.6c-.4-.4-1-.5-1.4-.1l-1.3 1.2c-.1.1-.3.2-.5.2H6.5c-.8 0-1.5.6-1.6 1.4l-.2 1.4-.1 1.1c0 .2.1.4.2.5.1.1.2.1.3.1h.4l.2 4.2c.1.2.3.4.6.4H8.1c.4 0 .6-.3.7-.8l.2-4 .1-1.9v-.7c0-.1 0-.2.1-.3l1.5-1.3c.5-.4.6-1 .3-1.4z"
+                    />
+                    <path
+                      d="M6.9 13c.5 0 .9-.2 1.3-.5.4-.4.5-.8.5-1.3s-.2-.9-.5-1.3c-.4-.3-.8-.5-1.3-.5s-.9.2-1.3.5c-.4.4-.5.8-.5 1.3s.2.9.5 1.3.8.5 1.3.5z"
+                    />
+                  </g>
                 </svg>
-                <span>Courses</span>
+                <span>Accompagnateurs</span>
                 <div class="according-menu">
                   <i class="fa fa-angle-down"></i></div
               ></NuxtLink>

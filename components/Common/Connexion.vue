@@ -100,6 +100,7 @@ export default {
       username: "",
       password: "",
       error: "",
+      success: "",
     };
   },
   head() {

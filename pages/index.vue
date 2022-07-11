@@ -14,7 +14,7 @@
           color="#F4DFF8"
           number="8"
           class=""
-          icons="drivers"
+          icons="courses-success"
         ></bloc-card>
       </div>
       <div
@@ -26,7 +26,7 @@
           subtitle="Parents inscrits"
           number="60"
           class=""
-          icons="parents"
+          icons="courses-waiting"
         ></bloc-card>
       </div>
       <div
@@ -37,7 +37,7 @@
           number="299"
           class=""
           color="#F4DFF8"
-          icons="childs"
+          icons="courses-canceled"
         ></bloc-card>
       </div>
       <div

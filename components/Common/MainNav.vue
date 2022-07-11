@@ -163,29 +163,6 @@
                   <i class="fa fa-angle-down"></i></div
               ></NuxtLink>
             </li>
-
-            <li class="dropdown">
-              <NuxtLink class="nav-link menu-title" to="/live-chat"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-message-circle"
-                >
-                  <path
-                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
-                  ></path></svg
-                ><span>Chat</span>
-                <div class="according-menu">
-                  <i class="fa fa-angle-right"></i></div
-              ></NuxtLink>
-            </li>
             <li class="dropdown">
               <NuxtLink class="nav-link menu-title" to="/accompagnateurs">
                 <svg
@@ -214,52 +191,6 @@
                   </g>
                 </svg>
                 <span>Accompagnateurs</span>
-                <div class="according-menu">
-                  <i class="fa fa-angle-down"></i></div
-              ></NuxtLink>
-            </li>
-            <li class="dropdown">
-              <NuxtLink class="nav-link menu-title" to="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-file"
-                >
-                  <path
-                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
-                  ></path>
-                  <polyline points="13 2 13 9 20 9"></polyline>
-                </svg>
-                <span>Facturation</span>
-                <div class="according-menu">
-                  <i class="fa fa-angle-down"></i></div
-              ></NuxtLink>
-            </li>
-            <li class="dropdown">
-              <NuxtLink class="nav-link menu-title" to="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-credit-card"
-                >
-                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-                  <line x1="1" y1="10" x2="23" y2="10" />
-                </svg>
-                <span>Paiement</span>
                 <div class="according-menu">
                   <i class="fa fa-angle-down"></i></div
               ></NuxtLink>

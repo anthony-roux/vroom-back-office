@@ -137,27 +137,33 @@ export default {
   },
   // Nuxt Axios
   axios: {
-    baseURL: 'http://localhost:1234/'
+    baseURL: 'http://localhost:3000/',
+    proxyHeaders: false,
+    credentials: false,
+    proxy: true
   },
-  auth: {
-    localStorage: false,
-    cookie: {
-      prefix: 'auth.',
-      options: {
-        path: '/',
-        maxAge: 10800
-      }
-    },
-    strategies: {
-      local: {
-        endpoints: {
-          login: { url: 'login', method: 'post', propertyName: 'access_token' },
-          user: { url: 'index', method: 'get', propertyName: 'content' },
-          logout: false
-        }
-      }
-    }
+  proxy: {
+    '/api/': { target: 'https://hetic-vroom-api-conducteurs.one-website.com/', pathRewrite: {'^/api/': ''} }
   },
+  // auth: {
+  //   localStorage: false,
+  //   cookie: {
+  //     prefix: 'auth.',
+  //     options: {
+  //       path: '/',
+  //       maxAge: 10800
+  //     }
+  //   },
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         login: { url: 'login', method: 'post', propertyName: 'access_token' },
+  //         user: { url: 'index', method: 'get', propertyName: 'content' },
+  //         logout: false
+  //       }
+  //     }
+  //   }
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

@@ -1,5 +1,5 @@
 <template>
-  <section id="page-connexion" class="flex items-center justify-center">
+  <section id="page-inscription" class="flex items-center justify-center">
     <div
       class="w-full max-w-[600px] p-12 overflow-hidden md:bg-white rounded-md"
     >
@@ -7,23 +7,44 @@
         class="flex flex-col items-center justify-center mx-auto text_center"
       >
         <base-use-svg id="vroom" size="logo-xl" class="vroom" color="pink" />
-        <h1 class="mb-0 text-3xl text-center">{{ titre }}</h1>
+        <h1 class="mb-10 text-3xl text-center">{{ titre }}</h1>
       </div>
       <form
         action="post"
         class="mt-8"
         data-success="Thanks for your enquiry, we'll be in touch shortly."
         data-error="Please fill in all fields correctly."
-        @submit.prevent="login"
+        @submit.prevent="register"
       >
-        <div class="flex flex-col md:py-12 md:px-12">
-          <base-input-text
+        <div class="grid px-8 md:px-12 md:grid-cols-2 md:gap-8">
+          <!-- <base-input-text
             type="text"
             namefor="name"
-            label="E-mail"
+            label="Nom"
             placeholder=" "
             :required="true"
-            class="mb-12 border-b-2 md:mr-8 border-primary-vert1"
+            class="border-b-2 md:mr-8 border-primary-vert1"
+            v-model="userInfos.firstname"
+          />
+          <base-input-text
+            type="text"
+            namefor="lastname"
+            label="Prénom"
+            placeholder=" "
+            :required="true"
+            v-model="userInfos.lastname"
+            class="border-b-2 border-primary-vert1"
+          /> -->
+        </div>
+        <div class="grid px-8 md:px-12 md:grid-cols-2 md:gap-8">
+          <base-input-text
+            type="mail"
+            namefor="mail"
+            label="Adresse e-mail"
+            placeholder=" "
+            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+            :required="true"
+            class="border-b-2 md:mr-8 border-primary-vert1"
             v-model="email"
           />
           <base-input-text
@@ -37,6 +58,7 @@
             class="border-b-2 md:mr-8 border-primary-vert1"
           />
         </div>
+
         <b-notification v-if="error" type="is-warning">
           {{ error }}
         </b-notification>
@@ -77,7 +99,7 @@
 import axios from "axios";
 
 export default {
-  name: "Connexion",
+  name: "Inscription",
   props: {
     titre: {
       type: String,
@@ -93,14 +115,17 @@ export default {
     },
     url_lien: {
       type: String,
-      default: "/inscription",
+      default: "/",
     },
   },
   computed: {},
   data() {
     return {
       showModal: false,
-      isLogin: true,
+      userInfos: {
+        firstname: "",
+        lastname: "",
+      },
       email: "",
       password: "",
       error: "",
@@ -110,24 +135,15 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: "connexion",
+        class: "inscription",
       },
     };
   },
   methods: {
-    async login() {
-      this.$store.dispatch("authenticateUser", {
-        isLogin: this.isLogin,
-        email: this.email,
-        password: this.password,
-      }).then(() => {
-        this.$router.push('/')
-      });
-    },
-    // async login() {
+    // async register() {
     //   try {
     //     await this.$auth.loginWith("local", {
-    //       userInfos: {
+    //       data: {
     //         email: this.userInfos.email,
     //         password: this.userInfos.password,
     //       },
@@ -139,27 +155,31 @@ export default {
     //   }
     // },
 
-    // MODAL / FORM
-    // submitParents() {
-    //   axios
-    //     .post("/", this.form)
-    //     .then((res) => {
-    //       //Perform Success Action
-    //       console.log("res", res);
-    //       this.status = "res";
-    //       this.$router.push("/");
-    //       this.success = true;
-    //     })
-    //     .catch((error) => {
-    //       // error.response.status Check status code
-    //       console.log("error", error);
-    //       this.status = "error";
-    //       this.success = true;
-    //     })
-    //     .finally(() => {
-    //       //Perform action in always
-    //     });
-    // },
+    async register() {
+      this.$axios
+        .$post(
+          "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" +
+            process.env.fbAPIKey,
+          {
+            email: this.email,
+            password: this.password,
+            returnSecureToken: true,
+          }
+        )
+        .then((res) => {
+          //       //Perform Success Action
+          console.log("res", res);
+          //       this.status = "res";
+          //       this.$router.push("/");
+          //       this.success = true;
+        })
+        .catch((error) => {
+          //       // error.response.status Check status code
+          console.log("error", error);
+          //       this.status = "error";
+          //       this.success = true;
+        });
+    },
   },
 };
 </script>

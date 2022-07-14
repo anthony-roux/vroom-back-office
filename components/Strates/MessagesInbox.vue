@@ -1,63 +1,27 @@
 <template>
-  <section class="p-8 card email-body">
-    <p class="text-xl font-bold">{{title}}</p>
+  <section class="py-8 card email-body">
+    <p class="px-8 mb-5 text-xl font-bold">{{ title }}</p>
 
     <div class="email-profile">
       <div>
-        <div class="email-top">
-          <div class="row">
-            <div class="py-4 col-12">
-              <div class="media">
-                <label class="mr-5 email-chek d-block" for="chk-ani">
-                  <input
-                    class="text-transparent transition duration-100 ease-in-out border-transparent rounded shadow-sm checkbox_animated focus:border-transparent focus:ring-0 focus:ring-transparent focus:outline-none focus:ring-opacity-50 focus:ring-offset-0 disabled:opacity-50 disabled:cursor-not-allowed"
-                    id="chk-ani"
-                    type="checkbox"
-                    checked=""
-                  />
-                </label>
-                <div class="media-body">
-                  <div class="dropdown">
-                    <t-button
-                      variant="secondaryPink"
-                      class="after:ml-0 dropdown-toggle"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <span class="">Action</span>
-                    </t-button>
-
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="javascript:void(0)"
-                        >Refresh</a
-                      ><a class="dropdown-item" href="javascript:void(0)"
-                        >Mark as important</a
-                      ><a class="dropdown-item" href="javascript:void(0)"
-                        >Move to span</a
-                      ><a class="dropdown-item" href="javascript:void(0)"
-                        >Move to trush
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="grid grid-cols-12 inbox">
           <slot />
-
         </div>
       </div>
+    </div>
+    <div class="flex justify-end w-full px-8 pt-8">
+      <nuxt-link
+        v-if="seeMore"
+        to="/questions"
+        class="inline-flex text-md t-link"
+        >Voir plus
+      </nuxt-link>
     </div>
   </section>
 </template>
 <script>
+import axios from "axios";
+
 export default {
   name: "MessagesInbox",
   props: {
@@ -81,9 +45,21 @@ export default {
       required: false,
       default: "Les dernières questions parents reçues",
     },
+    seeMore: {
+      type: Boolean,
+      required: false,
+    },
   },
   data: function () {
-    return {};
+    return {
+      datas: "",
+    };
+  },
+  methods: {},
+  mounted() {
+    axios
+      .get("/api/questions/get")
+      .then((response) => (this.datas = response.data));
   },
 };
 </script>

@@ -8,11 +8,13 @@ import UseSvg from "~/components/Base/UseSvg.vue";
 import InputText from "~/components/Base/InputText.vue";
 import TextArea from "~/components/Base/TextArea.vue";
 import MessageItem from "~/components/Base/MessageItem.vue";
+import MessageItemDetails from "~/components/Base/MessageItemDetails.vue";
 
 Vue.component("base-use-svg", UseSvg);
 Vue.component("base-input-text", InputText);
 Vue.component("base-text-area", TextArea);
 Vue.component("base-message-item", MessageItem);
+Vue.component("base-message-item-details", MessageItemDetails);
 
 // CORE
 
@@ -25,11 +27,13 @@ Vue.component("base-message-item", MessageItem);
 import SvgIcons from "~/components/Common/SvgIcons.vue";
 import Welcome from "~/components/Common/Welcome.vue";
 import Connexion from "~/components//Common/Connexion";
+import Inscription from "~/components//Common/Inscription";
 
 
 Vue.component("c-svg-icons", SvgIcons);
 Vue.component("bloc-welcome", Welcome);
 Vue.component("connexion", Connexion);
+Vue.component("inscription", Inscription);
 
 // STRATES
 

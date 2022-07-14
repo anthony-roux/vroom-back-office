@@ -123,10 +123,10 @@ export default {
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
-    "@nuxtjs/auth",
+    // "@nuxtjs/auth",
     "@nuxt/image",
     "nuxt-svg-loader",
-    
+    "@nuxtjs/moment",
   ],
   // Purge module configuration: https://purgecss.com/guides/nuxt.html
   purgeCSS: {
@@ -135,36 +135,55 @@ export default {
   styleResources: {
     scss: ["./assets/styles/_all_settings.scss"],
   },
+
+  moment: {
+    defaultLocale: "fr",
+    locales: ["fr"],
+  },
   // Nuxt Axios
   axios: {
-    baseURL: 'http://localhost:3000/',
+    baseURL: "http://localhost:3000/",
     proxyHeaders: false,
     credentials: false,
-    proxy: true
+    proxy: true,
   },
   proxy: {
-    '/api/': { target: 'https://hetic-vroom-api-conducteurs.one-website.com/', pathRewrite: {'^/api/': ''} }
+    "/api/": {
+      target: "https://hetic-vroom-api.one-website.com/",
+      pathRewrite: { "^/api/": "" },
+    },
   },
-  // auth: {
-  //   localStorage: false,
-  //   cookie: {
-  //     prefix: 'auth.',
-  //     options: {
-  //       path: '/',
-  //       maxAge: 10800
-  //     }
-  //   },
-  //   strategies: {
-  //     local: {
-  //       endpoints: {
-  //         login: { url: 'login', method: 'post', propertyName: 'access_token' },
-  //         user: { url: 'index', method: 'get', propertyName: 'content' },
-  //         logout: false
-  //       }
-  //     }
-  //   }
-  // },
+  auth: {
+    localStorage: false,
+    cookie: {
+      prefix: "auth.",
+      options: {
+        path: "/",
+        maxAge: 10800,
+      },
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: "login", method: "post", propertyName: "access_token" },
+          user: {
+            url: "/api/users/get",
+            method: "get",
+            propertyName: "content",
+          },
+          logout: false,
+        },
+      },
+    },
+  },
+  router: {
+    middleware: "log",
+  },
 
+  env: {
+    baseURL: process.env.BASE_URL || "https://vroom-api-99af7.firebaseapp.com",
+    fbAPIKey: "AIzaSyDRbzZQJKFU-ykEgxUoOM4grnSjbBqlVek",
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ["epic-spinners"],

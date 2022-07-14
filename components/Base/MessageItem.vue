@@ -1,25 +1,32 @@
 <template>
-  <div class="col-span-12 row-span-1 py-3 py-6 border-b media">
+  <div class="col-span-12 row-span-1 px-8 py-4 border-b cursor-pointer media hover:bg-grey-lighter ">
     <label :for="namefor" class="grid w-full grid-cols-12 mb-0 email-chek">
-      <span class="flex items-center col-span-1">
-        <input
-          :id="namefor"
-          :type="type"
-          :name="namefor"
-          value="2"
-          class="text-transparent transition duration-100 ease-in-out border-transparent rounded shadow-sm checkbox_animated focus:border-transparent focus:ring-0 focus:ring-transparent focus:outline-none focus:ring-opacity-50 focus:ring-offset-0 disabled:opacity-50 disabled:cursor-not-allowed"
-        />
-      </span>
-      <div class="col-span-11">
-        <div class="grid items-center grid-cols-12">
-          <h6 class="col-span-3 mb-0 text-sm font-bold text-pink">
-            <span class="mr-1">{{ clientFirstname }}</span> <span>{{ clientLastname }}</span>
-          </h6>
-          <p class="h-8 col-span-8 mb-0 overflow-hidden font-medium">
+      <div class="flex items-center justify-between col-span-12">
+        <div class="items-center justify-start w-[90%] flex">
+          <div
+            class="flex items-center w-[30%] max-w-[180px] h-7 col-span-3 mb-0 mr-4 text-xs font-bold text-pink"
+          >
+            <span class="flex items-center h-full gap-x-2">
+              <input
+                :id="namefor"
+                :type="type"
+                :name="namefor"
+                value="2"
+                class="mb-[6px] text-transparent transition duration-100 ease-in-out border-transparent rounded shadow-sm checkbox_animated focus:border-transparent focus:ring-0 focus:ring-transparent focus:outline-none focus:ring-opacity-50 focus:ring-offset-0 disabled:opacity-50 disabled:cursor-not-allowed"
+              />
+            </span>
+            <span class="h-full mr-1">{{ clientFirstname }}</span>
+            <span class="h-full">{{ clientLastname }}</span>
+          </div>
+          <p
+            class="w-[70%] h-7 col-span-7 ml-3 mb-0 overflow-hidden text-xs font-medium"
+          >
             {{ clientMessage }}
           </p>
-          <span class="col-span-1 mb-0 text-right">{{ clientDate }}</span>
         </div>
+        <span class="h-7 w-[10%] col-span-1 mb-0 text-xs text-right">{{
+          clientDate
+        }}</span>
       </div>
     </label>
   </div>
@@ -58,6 +65,7 @@ export default {
       required: false,
     },
   },
+
   computed: {
     inputVal: {
       get() {

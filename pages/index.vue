@@ -43,65 +43,42 @@
       <div
         class="col-span-12 col-start-1 row-span-6 lg:col-end-7 row-start-10 box"
       >
-        <bloc-messages-inbox title="Les dernières questions parents reçues">
+        <bloc-messages-inbox
+          title="Les dernières questions parents reçues"
+          :seeMore="true"
+        >
           <base-message-item
+            v-for="data in datasQuestion.slice(0, 3)"
+            v-bind:key="data._id"
             type="checkbox"
-            namefor="message1"
-            clientLastname="Hubert"
-            clientFirstname="Francis"
-            clientMessage="Anim ad Lorem cillum cupidatat officia amet dolor cillum aliquip Lorem dolor."
-            clientDate="01 juil"
-          />
-          <base-message-item
-            type="checkbox"
-            namefor="message2"
-            clientLastname="Ouf"
-            clientFirstname="Dorian"
-            clientMessage="Anim ad Lorem cillum cupidatat officia amet dolor cillum aliquip Lorem dolor."
-            clientDate="12 juil"
-          />
-          <base-message-item
-            type="checkbox"
-            namefor="message3"
-            clientLastname="HotRabbit"
-            clientFirstname="Ricky"
-            clientMessage="Anim ad Lorem cillum cupidatat officia amet dolor cillum aliquip Lorem dolor."
-            clientDate="31 juil"
+            :namefor="data._id"
+            :clientLastname="data.name"
+            :clientFirstname="data.lastname"
+            :clientMessage="data.text"
+            :clientDate="$moment(data.date).format('MMM Do')"
           />
         </bloc-messages-inbox>
       </div>
       <div
         class="col-span-12 col-start-1 row-span-6 lg:col-end-13 lg:col-start-7 box"
       >
-        <bloc-messages-inbox title="Les dernières candidatures chauffeurs">
+        <bloc-messages-inbox
+          title="Les dernières candidatures chauffeurs"
+          :seeMore="true"
+        >
           <base-message-item
+            v-for="data in datasQuestion.slice(0, 3)"
+            v-bind:key="data._id"
             type="checkbox"
-            namefor="message1"
-            clientLastname="Gonze"
-            clientFirstname="Rodrigue"
-            clientMessage="Anim ad Lorem cillum cupidatat officia amet dolor cillum aliquip Lorem dolor."
-            clientDate="01 juil"
-          />
-
-          <base-message-item
-            type="checkbox"
-            namefor="message2"
-            clientLastname="Pascal"
-            clientFirstname="Michel"
-            clientMessage="Anim ad Lorem cillum cupidatat officia amet dolor cillum aliquip Lorem dolor."
-            clientDate="12 juil"
+            :namefor="data._id"
+            :clientLastname="data.name"
+            :clientFirstname="data.lastname"
+            :clientMessage="data.text"
+            :clientDate="$moment(data.date).format('MMM Do')"
           />
         </bloc-messages-inbox>
       </div>
-
-      <div class="" v-for="data in datas" v-bind:key="data._id">
-        <div>{{ data.email }}</div>
-        <div>{{ data.prenom }}</div>
-        <div>{{ data.nom }}</div>
-      </div>
-      <button v-on:click="update()">Mise à jour</button>
-
-      <p>{{ phrase }}</p>
+      <button v-on:click="deleteQuestion()">Supprimer</button>
     </div>
   </div>
 </template>
@@ -127,8 +104,8 @@ export default {
     return {
       currentSlug: "home",
       page: this.$route.name,
-      datas: "",
-      phrase: "Aucun",
+      datasQuestion: "",
+      dateConverted: ""
     };
   },
   head() {
@@ -141,7 +118,14 @@ export default {
   methods: {
     update() {
       axios
-        .get("http://localhost:3000/user/get/")
+        .get("/api/questions/get")
+        .then((response) => (this.datas = response.data));
+
+      console.log(this.datas);
+    },
+    deleteQuestion() {
+      axios
+        .delete("/api/questions/delete/62ce9ca9fdcac7867f3e0174")
         .then((response) => (this.datas = response.data));
 
       console.log(this.datas);
@@ -159,8 +143,8 @@ export default {
   },
   mounted() {
     axios
-      .get("/api/user/get/")
-      .then((response) => (this.datas = response.data));
+      .get("/api/questions/get")
+      .then((response) => (this.datasQuestion = response.data));
   },
 };
 </script>

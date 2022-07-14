@@ -19,7 +19,7 @@
         <!-- Page Sidebar Ends-->
         <div class="page-body pt-[30px] lg:pt-[100px]">
           <transition name="fade">
-          <nuxt class="page-content" />
+            <nuxt class="page-content" />
           </transition>
         </div>
         <Footer />
@@ -37,6 +37,7 @@ import MainNav from "~/components/Common/MainNav.vue";
 import Footer from "~/components/Common/Footer.vue";
 
 export default {
+  // middleware: "log",
   data: function () {
     return {
       date: new Date(),
@@ -70,7 +71,7 @@ export default {
     },
     _onResize() {
       this.$device._onResize(); // Update value
-      this.setScreen();
+      // this.setScreen();
       this.$eventHub.$emit("onResize");
     },
     _onUpdate() {
@@ -86,20 +87,20 @@ export default {
       this.$eventHub.$emit("onScroll", this.$device.scroll);
     },
 
-    setScreen() {
-      const bpValues = Object.values(this.config.bp);
-      const bpKeys = Object.keys(this.config.bp);
-      let screen = "desktop";
-      if (bpValues.length) {
-        for (let i = 0; i < bpValues.length; i++) {
-          if (this.$device.width <= bpValues[i]) {
-            screen = bpKeys[i];
-            break;
-          }
-        }
-      }
-      this.$store.dispatch("global/loadScreen", screen);
-    },
+    // setScreen() {
+    //   const bpValues = Object.values(this.config.bp);
+    //   const bpKeys = Object.keys(this.config.bp);
+    //   let screen = "desktop";
+    //   if (bpValues.length) {
+    //     for (let i = 0; i < bpValues.length; i++) {
+    //       if (this.$device.width <= bpValues[i]) {
+    //         screen = bpKeys[i];
+    //         break;
+    //       }
+    //     }
+    //   }
+    //   this.$store.dispatch("global/loadScreen", screen);
+    // },
   },
   watch: {
     $route() {
